@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam's Portfolio - Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <section id="profile-picture">
+                        <img src="images/uttam......JPG" alt="Profile Picture">
+                    </section>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="skills.html"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section id="projects">
+                <h1 class="section-heading">My Projects</h1>
+                <div class="project-container">
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="images/avtar.png" alt="Project 1 Thumbnail" class="project-thumbnail">
+                                <h2>Project Title 1</h2>
+                                <p>Short description of the first project.</p>
+                                <a href="https://github.com/username/project1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="card-back">
+                                <h2>Project Title 1 Details</h2>
+                                <p>Detailed description of the first project with features and technologies used.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="images/avtar.png"" alt="Project 2 Thumbnail" class="project-thumbnail">
+                                <h2>Project Title 2</h2>
+                                <p>Short description of the second project.</p>
+                                <a href="https://github.com/username/project2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="card-back">
+                                <h2>Project Title 2 Details</h2>
+                                <p>Detailed description of the second project with features and technologies used.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="images/avtar.png" alt="Project 3 Thumbnail" class="project-thumbnail">
+                                <h2>Project Title 3</h2>
+                                <p>Short description of the third project.</p>
+                                <a href="https://github.com/username/project3" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="card-back">
+                                <h2>Project Title 3 Details</h2>
+                                <p>Detailed description of the third project with features and technologies used.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="images/avtar.png" alt="Project 4 Thumbnail" class="project-thumbnail">
+                                <h2>Project Title 4</h2>
+                                <p>Short description of the fourth project.</p>
+                                <a href="https://github.com/username/project4" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="card-back">
+                                <h2>Project Title 4 Details</h2>
+                                <p>Detailed description of the fourth project with features and technologies used.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="images/avtar.png" alt="Project 5 Thumbnail" class="project-thumbnail">
+                                <h2>Project Title 5</h2>
+                                <p>Short description of the fifth project.</p>
+                                <a href="https://github.com/username/project5" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="card-back">
+                                <h2>Project Title 5 Details</h2>
+                                <p>Detailed description of the fifth project with features and technologies used.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="images/avtar.png" alt="Project 6 Thumbnail" class="project-thumbnail">
+                                <h2>Project Title 6</h2>
+                                <p>Short description of the sixth project.</p>
+                                <a href="https://github.com/username/project6" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                            <div class="card-back">
+                                <h2>Project Title 6 Details</h2>
+                                <p>Detailed description of the sixth project with features and technologies used.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+    </script>
+</body>
+</html>
