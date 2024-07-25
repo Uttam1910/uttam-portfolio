@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <script type="text/javascript" src="emailjs.send(serviceID, templateID, templateParams, options);"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("#"); // Replace with your EmailJS public API key
+        })();
+    </script>
 </head>
 <body>
     <div class="container">
@@ -33,7 +38,6 @@
                 <h1>Contact</h1>
                 <div class="contact-info">
                     <p>You can reach out to me via the following platforms:</p>
-                    <br>
                     <div class="contact-icons">
                         <a href="https://www.linkedin.com/in/Uttam" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -41,7 +45,7 @@
                         <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a>
                     </div>
                 </div>
-                <form id="contactForm">
+                <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
@@ -59,6 +63,31 @@
             </section>
         </main>
     </div>
-    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            console.log("Sending email...");
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+            console.log("Message: " + message);
+
+            emailjs.send('#', '#', {
+                from_name: name,
+                from_email: email,
+                message: message
+            }).then(function(response) {
+                console.log('Mail sent successfully:', response.status, response.text);
+                alert('Mail sent successfully');
+            }, function(error) {
+                console.error('Error sending email:', error);
+                alert('Error sending email: ' + error.text);
+            });
+        });
+    </script>
 </body>
 </html>

@@ -20,28 +20,33 @@ function toggleFlip(card) {
     card.classList.toggle('flipped');
 }
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+// document.getElementById('contact-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
 
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
+//     var name = document.getElementById('name').value;
+//     var email = document.getElementById('email').value;
+//     var message = document.getElementById('message').value;
 
-    fetch('http://localhost:3000/send', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert('Message sent successfully!');
-    })
-    .catch(error => {
-        alert('Error sending message.');
-        console.error('Error:', error);
-    });
-});
+//     console.log("Sending email...");
+//     console.log("Name: " + name);
+//     console.log("Email: " + email);
+//     console.log("Message: " + message);
+
+//     Email.send({
+//         SecureToken: "d0833c96-fce6-41ac-9335-50924126bb9f",
+//         To: 'ut224365@gmail.com',
+//         From: email,
+//         Subject: `New message from ${name}`,
+//         Body: `Name: ${name}<br>Email: ${email}<br>Message: ${message}`
+//     }).then(
+//         message => {
+//             console.log("Mail sent successfully:", message);
+//             alert("Mail sent successfully");
+//         }
+//     ).catch(
+//         error => {
+//             console.error("Error sending email:", error);
+//             alert("Error sending email: " + error.message);
+//         }
+//     );
+// });
