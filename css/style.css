@@ -377,6 +377,7 @@ main {
     line-height: 1.5;
 }
 
+
 /* Media Queries */
 @media (max-width: 768px) {
     .skill-item {
